@@ -7,6 +7,12 @@ jobs:
   test-aws-oidc:
     runs-on: ubuntu-latest
     steps:
+      - name: Show GitHub context
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "Ref Name: ${{ github.ref_name }}"
+          echo "Event: ${{ github.event_name }}"
       - uses: actions/checkout@v4
       - uses: aws-actions/configure-aws-credentials@v4
         with:
