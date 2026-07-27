@@ -14,9 +14,6 @@ jobs:
           echo "Ref Name: ${{ github.ref_name }}"
           echo "Event: ${{ github.event_name }}"
       - uses: actions/checkout@v4
-      
-      - name: Debug OIDC claims
-        uses: github/actions-oidc-debugger@v1
         
       - uses: aws-actions/configure-aws-credentials@v4
         with:
